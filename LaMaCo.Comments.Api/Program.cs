@@ -1,6 +1,27 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using LaMaCo.Comments.Api.Data;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<CommentsContext>(options =>
+{
+    if (builder.Environment.IsDevelopment())
+    {
+        var folder = Environment.SpecialFolder.LocalApplicationData;
+        var path = Environment.GetFolderPath(folder);
+        var dbPath = System.IO.Path.Join(path, "comments.db");
+        options.UseSqlite($"Data Source={dbPath}");
+        options.EnableDetailedErrors();
+        options.EnableSensitiveDataLogging();
+    }
+    else
+    {
+        var cs = builder.Configuration.GetConnectionString("CommentsContext");
+        options.UseSqlServer(cs);
+    }
+});
 
 var app = builder.Build();
 
