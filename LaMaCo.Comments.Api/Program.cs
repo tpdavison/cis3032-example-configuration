@@ -29,27 +29,16 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+var responseMessage = app.Configuration["Message"] ?? "";
 
-app.MapGet("/weatherforecast", () =>
+app.MapPost("/comments", async (CommentsContext ctx, CommentDto dto) =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateTime.Now.AddDays(index),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    var comment = new Comment { AuthorName = dto.AuthorName, Text = dto.Text };
+    await ctx.AddAsync(comment);
+    await ctx.SaveChangesAsync();
+    return responseMessage;
 });
 
 app.Run();
 
-record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+record CommentDto(string AuthorName, string Text);
