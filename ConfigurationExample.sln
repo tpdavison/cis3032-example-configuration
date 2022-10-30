@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaMaCo.Comments.Api", "LaMaCo.Comments.Api\LaMaCo.Comments.Api.csproj", "{0446B23A-5C74-41D5-A2FF-0C894150C995}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0446B23A-5C74-41D5-A2FF-0C894150C995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0446B23A-5C74-41D5-A2FF-0C894150C995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0446B23A-5C74-41D5-A2FF-0C894150C995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0446B23A-5C74-41D5-A2FF-0C894150C995}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE91D265-3F0F-42E4-9FB7-1CB5AEA76814}
+	EndGlobalSection
+EndGlobal
