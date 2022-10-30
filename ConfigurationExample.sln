@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1703.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaMaCo.Comments.Api", "LaMaCo.Comments.Api\LaMaCo.Comments.Api.csproj", "{0446B23A-5C74-41D5-A2FF-0C894150C995}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaMaCo.Comments.Web", "LaMaCo.Comments.Web\LaMaCo.Comments.Web.csproj", "{09E72B8C-D79F-494C-9318-B92A48B2316C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0446B23A-5C74-41D5-A2FF-0C894150C995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0446B23A-5C74-41D5-A2FF-0C894150C995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0446B23A-5C74-41D5-A2FF-0C894150C995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E72B8C-D79F-494C-9318-B92A48B2316C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E72B8C-D79F-494C-9318-B92A48B2316C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E72B8C-D79F-494C-9318-B92A48B2316C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E72B8C-D79F-494C-9318-B92A48B2316C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
