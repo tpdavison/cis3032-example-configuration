@@ -1,6 +1,9 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using LaMaCo.Comments.Web.Controllers;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpClient<CommentsController>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
