@@ -39,6 +39,11 @@ app.MapPost("/comments", async (CommentsContext ctx, CommentDto dto) =>
     return responseMessage;
 });
 
+app.MapGet("/comments", async (CommentsContext ctx) =>
+{
+    return await ctx.Comments.ToListAsync();
+});
+
 app.Run();
 
 record CommentDto(string AuthorName, string Text);
