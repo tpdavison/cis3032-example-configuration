@@ -1,6 +1,7 @@
 ﻿using LaMaCo.Comments.Web.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Logging.AddAzureWebAppDiagnostics();
 
 // Add services to the container.
 builder.Services.AddHttpClient<CommentsController>();
